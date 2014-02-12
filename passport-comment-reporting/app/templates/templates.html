@@ -1,0 +1,41 @@
+<script type="text/template" id="date-control-template">
+	<form class="form-inline" role="form">
+	 	<div class="form-group">
+	 		<label class="sr-only" for="startDate">Start Date:</label>
+	 		<input type="text" class="form-control" id="startDate" value="<%= startDate %>" />
+		</div>
+		<div class="form-group">
+	    	<label class="sr-only" for="endDate">End Date:</label>
+	 		<input type="text" class="form-control" id="endDate"  value="<%= endDate %>">
+	 	</div>
+		<button type="submit" class="btn btn-default" id="report">Report!</button>
+	</form>
+</script>
+
+
+<script type="text/template" id="comment-reporting-template">
+	<h1>Comment Reporting. beta</h1>
+	<div id="date-control"></div>
+	<div id="comment-report-area"></div>
+	<div id="comment-report-total-area"></div>
+</script>
+		
+
+
+<script type="text/template" id="comment-report-area-template">
+<table>
+	<thead>
+		<tr>
+		<th>Post Title<th><th>Number of comments<th>
+		</tr>
+	<tbody></tbody>
+</table>
+</script>
+
+<script type="text/template" id="comment-report-model-template">
+	<td><a href="/?p=<%= ID %>"><%= post_title %></a></td><td><%= count %></td>
+</script>
+
+
+
+<div id="comment-reporting"></div>
